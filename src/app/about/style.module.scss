@@ -1,0 +1,710 @@
+.aboutPage {
+  width: 100vw;
+  max-width: 100%;
+  background-color: #151515;
+  overflow: hidden;
+  padding-bottom: 100px;
+
+  .body {
+    margin: 250px 50px 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6rem;
+    max-width: 1400px;
+
+    .heading {
+      color: #ffffff;
+      margin-left: 100px;
+      width: 100%;
+      max-width: calc(100vw - 200px);
+
+      h1 {
+        font-size: clamp(2.2rem, 4vw, 3.5rem);
+        font-weight: 500;
+        max-width: 1000px;
+        line-height: 1.2;
+        hyphens: auto;
+      }
+    }
+
+    .contentFirst {
+      display: flex;
+      flex-direction: row;
+      gap: clamp(50px, 12vw, 200px);
+      width: 100%;
+      align-items: flex-start;
+
+      .aboutPara {
+        flex: 1;
+        margin-left: 100px;
+        margin-right: 50px;
+        min-width: 0;
+        .para {
+          font-size: clamp(1.1rem, 2vw, 1.5rem);
+          color: #ffffff;
+          line-height: 1.6;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .imageContainer {
+        position: relative;
+        width: clamp(250px, 20vw, 350px);
+        height: clamp(250px, 20vw, 350px);
+        flex-shrink: 0;
+        margin-right: 50px;
+        overflow: hidden;
+
+        .aboutImage {
+          object-fit: cover;
+          object-position: center;
+          transition: transform 0.3s ease;
+        }
+      }
+    }
+
+    .heading2 {
+      margin-top: 60px;
+      margin-left: 100px;
+      width: 100%;
+      max-width: calc(100vw - 200px);
+      h2 {
+        font-size: clamp(1.6rem, 2.8vw, 2.6rem);
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        line-height: 1.3;
+        word-wrap: break-word;
+
+        .dot {
+          margin-right: 8px;
+          font-size: clamp(2rem, 3.5vw, 3rem);
+          color: #fff;
+          opacity: 0.6;
+          animation: blink 1.5s infinite ease-in-out;
+        }
+      }
+    }
+
+    .because {
+      display: flex;
+      flex-direction: row;
+
+      .journeyImageContainer {
+        flex-shrink: 0;
+
+        img {
+          width: clamp(360px, 12vw, 280px) !important;
+          height: clamp(420px, 20vw, 420px) !important;
+          object-fit: cover;
+          object-position: center top;
+          transition: transform 0.3s ease;
+
+        }
+      }
+
+      p {
+        font-size: clamp(1.1rem, 2vw, 1.5rem);
+        color: #ffffff;
+        line-height: 1.6;
+        flex: 1;
+      }
+    }
+  }
+
+  .teamCard {
+    margin: 4rem auto 0;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    max-width: 600px;
+    width: 100%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+      &::before {
+        opacity: 1;
+      }
+
+      .cardContent {
+        h2 {
+          color: #ffffff;
+        }
+
+        .arrowIcon {
+          transform: translateX(6px);
+          opacity: 1;
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      padding: 2rem;
+    }
+
+    .cardContent {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+
+      h2 {
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.9);
+        margin: 0;
+        transition: color 0.3s ease;
+      }
+
+      p {
+        font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+        color: rgba(255, 255, 255, 0.6);
+        margin: 0.25rem 0 0 0;
+        line-height: 1.5;
+      }
+
+      .arrowIcon {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.4);
+        transition: all 0.3s ease;
+        opacity: 0.7;
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+.index {
+  font-style: italic;
+  font-size: clamp(1.6rem, 3vw, 3rem);
+  font-weight: 400;
+}
+
+
+
+@media screen and (min-width: 1440px) {
+  .aboutPage {
+    .body {
+      padding: 0 8%;
+      gap: 8rem;
+      margin-left: -80px;
+
+      .contentFirst {
+        gap: 100px;
+
+        .imageContainer {
+          width: 450px;
+          height: 450px;
+          margin-right: -150px;
+        }
+      }
+
+      .because {
+        gap: 400px;
+
+        .journeyImageContainer {
+          img {
+            width: 420px;
+            height: 640px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .aboutPage {
+    .body {
+      .contentFirst {
+        .imageContainer {
+          margin-right: -300px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1792px) {
+  .aboutPage {
+    .body {
+      .contentFirst {
+        .imageContainer {
+          margin-right: -500px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .aboutPage {
+    .body {
+      .contentFirst {
+        gap: 200px;
+        .imageContainer {
+          margin-top: -150px;
+          margin-right: -600px;
+        }
+      }
+
+      .because {
+        width: 100vw;
+
+        .text2 {
+          margin-left: -200px;
+          margin-right: 100px;
+        }
+      }
+
+      .teamCard {
+        margin-left: 600px;
+      }
+    }
+  }
+}
+
+// Desktop (1200px - 1439px)
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+  .aboutPage {
+    .body {
+      padding: 0 6%;
+      gap: 7rem;
+
+      .contentFirst {
+        gap: 250px;
+
+        .imageContainer {
+          width: 380px;
+          height: 380px;
+        }
+      }
+
+      .because {
+        gap: 250px;
+
+        .journeyImageContainer {
+          img {
+            width: 370px;
+            height: 560px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Large Tablet/Small Desktop (1024px - 1199px)
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  .aboutPage {
+    .body {
+      margin: 250px auto 0 auto;
+      gap: 5rem;
+      padding: 0 5%;
+
+      .heading {
+        h1 {
+          font-size: 3rem;
+          max-width: 100%;
+        }
+      }
+
+      .contentFirst {
+        gap: 150px;
+
+        .aboutPara {
+          .para {
+            font-size: 1.4rem;
+          }
+        }
+
+        .imageContainer {
+          width: 320px;
+          height: 380px;
+          margin-right: 20px;
+        }
+      }
+
+      .heading2 {
+        margin-top: 50px;
+        h2 {
+          font-size: 2.4rem;
+
+          .dot {
+            font-size: 2.6rem;
+          }
+        }
+      }
+
+      .because {
+        gap: 150px;
+
+        .journeyImageContainer {
+          img {
+            width: 320px;
+            height: 480px;
+          }
+        }
+
+        p {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+
+  .index {
+    font-size: 2.3rem;
+  }
+}
+
+// Tablet (768px - 1023px)
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .aboutPage {
+    .body {
+      margin: 220px auto 0 auto;
+      gap: 4rem;
+      padding: 0 4%;
+
+      .heading {
+        h1 {
+          font-size: 2.6rem;
+          max-width: 100%;
+        }
+      }
+
+      .contentFirst {
+        gap: 80px;
+        align-items: center;
+
+        .aboutPara {
+          .para {
+            font-size: 1.3rem;
+          }
+        }
+
+        .imageContainer {
+          width: 280px;
+          height: 350px;
+          margin-right: 0;
+        }
+      }
+
+      .heading2 {
+        margin-top: 40px;
+        text-align: center;
+
+        h2 {
+          font-size: 2.1rem;
+          justify-content: center;
+
+          .dot {
+            font-size: 2.3rem;
+            margin-right: 6px;
+          }
+        }
+      }
+
+      .because {
+        gap: 80px;
+        align-items: center;
+
+        .journeyImageContainer {
+          img {
+            width: 280px;
+            height: 420px;
+          }
+        }
+
+        p {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+
+  .index {
+    font-size: 2.1rem;
+  }
+}
+
+// Small Tablet/Large Mobile (600px - 767px)
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .aboutPage {
+    padding-bottom: 80px;
+
+    .body {
+      margin: 180px auto 0 auto;
+      gap: 3.5rem;
+      padding: 0 5%;
+
+      .heading {
+        text-align: center;
+        h1 {
+          font-size: 2.3rem;
+          line-height: 1.3;
+        }
+      }
+
+      .contentFirst {
+        flex-direction: column;
+        gap: 2.5rem;
+        align-items: center;
+
+        .aboutPara {
+          order: 2;
+          .para {
+            font-size: 1.2rem;
+            text-align: center;
+          }
+        }
+
+        .imageContainer {
+          order: 1;
+          width: 300px;
+          height: 350px;
+        }
+      }
+
+      .heading2 {
+        margin-top: 30px;
+        text-align: center;
+
+        h2 {
+          font-size: 1.9rem;
+          justify-content: center;
+
+          .dot {
+            font-size: 2.1rem;
+            margin-right: 5px;
+          }
+        }
+      }
+
+      .because {
+        flex-direction: column;
+        gap: 2.5rem;
+        align-items: center;
+
+        .journeyImageContainer {
+          order: 1;
+
+          img {
+            width: 300px;
+            height: 380px;
+          }
+        }
+
+        p {
+          order: 2;
+          font-size: 1.2rem;
+          text-align: center;
+        }
+      }
+    }
+
+    .teamCard {
+      margin: 3rem auto 0;
+      max-width: 90%;
+
+      a {
+        padding: 1.8rem;
+      }
+    }
+  }
+
+  .index {
+    font-size: 1.9rem;
+  }
+}
+
+// Mobile (max-width: 599px)
+@media screen and (max-width: 599px) {
+  .aboutPage {
+    padding-bottom: 60px;
+
+    .body {
+      margin: 150px auto 0 auto;
+      gap: 3rem;
+      padding: 0 6%;
+
+      .heading {
+        text-align: center;
+        h1 {
+          font-size: 2rem;
+          line-height: 1.3;
+        }
+      }
+
+      .contentFirst {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+
+        .aboutPara {
+          order: 2;
+          .para {
+            font-size: 1.1rem;
+            text-align: center;
+          }
+        }
+
+        .imageContainer {
+          order: 1;
+          width: 260px;
+          height: 310px;
+        }
+      }
+
+      .heading2 {
+        margin-top: 20px;
+        text-align: center;
+
+        h2 {
+          font-size: 1.6rem;
+          justify-content: center;
+
+          .dot {
+            font-size: 1.8rem;
+            margin-right: 4px;
+          }
+        }
+      }
+
+      .because {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+
+        .journeyImageContainer {
+          order: 1;
+
+          img {
+            width: 260px;
+            height: 320px;
+          }
+        }
+
+        p {
+          order: 2;
+          font-size: 1.1rem;
+          text-align: center;
+        }
+      }
+    }
+
+    .teamCard {
+      margin: 2.5rem auto 0;
+      max-width: 95%;
+      border-radius: 8px;
+
+      a {
+        padding: 1.5rem;
+      }
+
+      .cardContent {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+
+        .arrowIcon {
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+
+  .index {
+    font-size: 1.7rem;
+  }
+}
+
+// Very small mobile (max-width: 360px)
+@media screen and (max-width: 360px) {
+  .aboutPage {
+    .body {
+      margin: 120px auto 0 auto;
+      gap: 2.5rem;
+      padding: 0 4%;
+
+      .heading {
+        h1 {
+          font-size: 1.7rem;
+        }
+      }
+
+      .contentFirst {
+        .imageContainer {
+          width: 240px;
+          height: 280px;
+        }
+
+        .aboutPara {
+          .para {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .heading2 {
+        h2 {
+          font-size: 1.4rem;
+
+          .dot {
+            font-size: 1.6rem;
+          }
+        }
+      }
+
+      .because {
+        .journeyImageContainer {
+          img {
+            width: 240px;
+            height: 300px;
+          }
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .teamCard {
+      a {
+        padding: 1.2rem;
+      }
+    }
+  }
+
+  .index {
+    font-size: 1.5rem;
+  }
+}
