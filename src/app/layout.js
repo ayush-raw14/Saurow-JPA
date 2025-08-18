@@ -1,8 +1,9 @@
-import {Geist, Geist_Mono} from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header/index";
 import Footer from "@/components/Footer/index";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import { ViewTransitions } from "next-view-transitions";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -19,16 +20,18 @@ export const metadata = {
     description: 'Trusted CA firm offering indirect-taxes, audit, and financial advisory services.',
 };
 
-export default function RootLayout({children}) {
+export default function RootLayout({ children }) {
     return (
-        <ClerkProvider>
-            <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-            <body>
-            <Header />
-            {children}
-            <Footer />
-            </body>
-            </html>
-        </ClerkProvider>
+        <ViewTransitions>
+            <ClerkProvider>
+                <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+                    <body>
+                        <Header />
+                        {children}
+                        <Footer />
+                    </body>
+                </html>
+            </ClerkProvider>
+        </ViewTransitions>
     );
 }

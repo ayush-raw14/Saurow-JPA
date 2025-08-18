@@ -1,16 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Force dynamic rendering for specific pages
+  
   experimental: {
-    // Only use if you're on Next.js 14+ and want to try this
-    // dynamicIO: true,
+
   },
 
-  // Configure headers for better real-time performance
   async headers() {
     return [
       {
-        // API routes - prevent caching
         source: '/api/content/:path*',
         headers: [
           {
@@ -32,7 +29,6 @@ const nextConfig = {
         ]
       },
       {
-        // Blog page - prevent caching
         source: '/blog',
         headers: [
           {
@@ -48,23 +44,15 @@ const nextConfig = {
     ];
   },
 
-  // Remove the empty rewrites function - not needed
-  // async rewrites() {
-  //   return [];
-  // },
-
-  // Optional: Add this if you want to see more build info
   logging: {
     fetches: {
       fullUrl: true,
     },
   },
 
-  // Optional: If you're having issues with static optimization
   trailingSlash: false,
   
-  // Optional: Configure output (leave as default 'standalone' for Vercel)
-  // output: 'standalone',
+
 }
 
 module.exports = nextConfig
