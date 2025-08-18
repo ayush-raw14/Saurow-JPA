@@ -84,7 +84,7 @@ export default function WorkItem() {
             <section className={styles.workItemMain} ref={workItemMainRef}>
                 <section className={styles.workItem}>
                     <div className={styles.workItemImg}>
-                        <Image src="/images/handshake.jpg" alt="journey" fill priority />
+                        <Image src="/images/trees.jpg" alt="journey" fill priority />
                     </div>
                     <div className={styles.workItemName}>
                         <h1>Trusted Partnership</h1>
@@ -121,6 +121,15 @@ export default function WorkItem() {
                 <section className={styles.workItem}>
                     <div className={styles.workItemImg}>
                         <Image src="/images/side.jpg" alt="journey final" fill priority />
+                    </div>
+                    <div className={styles.workItemName}>
+                        <h1>Carbon Edge</h1>
+                    </div>
+                </section>
+
+                <section className={styles.workItem}>
+                    <div className={styles.workItemImg}>
+                        <Image src="/images/fern.jpg" alt="journey final" fill priority />
                     </div>
                     <div className={styles.workItemName}>
                         <h1>Carbon Edge</h1>
