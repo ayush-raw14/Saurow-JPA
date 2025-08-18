@@ -245,21 +245,6 @@ async function BlogContent() {
             <div className={styles.content}>
                 <div className={styles.contentBody}>
                     <p>{content.content}</p>
-                    {/* Debug info - remove after fixing */}
-                    <div style={{
-                        marginTop: '20px',
-                        padding: '10px',
-                        backgroundColor: '#f0f0f0',
-                        borderRadius: '4px',
-                        fontSize: '12px',
-                        color: '#666'
-                    }}>
-                        <strong>Debug Info:</strong><br/>
-                        Loaded at: {new Date().toISOString()}<br/>
-                        Content length: {content.content?.length || 0} characters<br/>
-                        Has image: {content.image ? 'Yes' : 'No'}<br/>
-                        Environment: {process.env.NODE_ENV}
-                    </div>
                 </div>
 
                 {content.meta && (
