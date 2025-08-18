@@ -2,7 +2,6 @@
 
 import styles from "./style.module.scss";
 import Image from "next/image";
-import Text from "@/common/Text/index";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
@@ -26,24 +25,24 @@ export default function AboutPage() {
         <section className={styles.aboutPage} ref={aboutRef}>
             <div className={styles.body}>
                 <div className={styles.heading}>
-                    <Text>
+                    
                         <h3 className={styles.index}>10</h3>
                         <h1>
                             Trusted Advisors. Tailored Solutions. Real Results.
                         </h1>
-                    </Text>
+                    
                 </div>
 
                 <div className={styles.contentFirst}>
                     <div className={styles.aboutPara}>
-                        <Text>
+                        
                             <p className={styles.para}>
                                 At the heart of our firm is a commitment to understanding your unique business. <br />
                                 We go beyond compliance — offering strategic insights, proactive planning, and financial clarity
                                 that drives long-term value. <br />Whether you&#39;re scaling a startup or managing a legacy enterprise,
                                 we provide personalized solutions that help you navigate change, manage risk, and seize opportunity.
                             </p>
-                        </Text>
+                        
                     </div>
 
                     <div className={styles.imageContainer}>
@@ -58,14 +57,14 @@ export default function AboutPage() {
                 </div>
 
                 <div className={styles.heading2}>
-                    <Text>
+                    
                         <h2>
                             <span className={styles.dot} ref={el => (dotsRef.current[0] = el)}>.</span>
                             <span className={styles.dot} ref={el => (dotsRef.current[1] = el)}>.</span>
                             <span className={styles.dot} ref={el => (dotsRef.current[2] = el)}>.</span>
                             Because Every Journey Deserves Direction
                         </h2>
-                    </Text>
+                    
                 </div>
 
                 <div className={styles.because}>
@@ -78,7 +77,7 @@ export default function AboutPage() {
                         />
                     </div>
                     <div className={styles.text2}>
-                        <Text>
+                        
                             <p>
                                 In the ever-changing world of finance, every decision shapes the path ahead. <br />
                                 We believe that every journey — whether you&#39;re launching a new venture, expanding your
@@ -86,7 +85,7 @@ export default function AboutPage() {
                                 Our role is to help you chart a clear course, avoid unnecessary detours, and arrive at your
                                 goals with confidence and clarity.
                             </p>
-                        </Text>
+                        
                     </div>
                 </div>
 
