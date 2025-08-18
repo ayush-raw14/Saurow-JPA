@@ -163,6 +163,7 @@ $card-bg: rgba(255, 255, 255, 0.03);
     width: 100%;
     background: $card-bg;
     border: 1px solid $border-light;
+    border-radius: 10px;
     backdrop-filter: blur(12px);
     transition: all 0.3s ease;
     position: relative;

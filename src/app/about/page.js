@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import Link from "next/link";
+import Text from "@/common/Text/index";
 
 export default function AboutPage() {
     const dotsRef = useRef([]);
@@ -25,12 +26,12 @@ export default function AboutPage() {
         <section className={styles.aboutPage} ref={aboutRef}>
             <div className={styles.body}>
                 <div className={styles.heading}>
-                    
+                    <Text>
                         <h3 className={styles.index}>10</h3>
                         <h1>
                             Trusted Advisors. Tailored Solutions. Real Results.
                         </h1>
-                    
+                    </Text>
                 </div>
 
                 <div className={styles.contentFirst}>
