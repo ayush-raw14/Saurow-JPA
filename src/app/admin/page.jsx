@@ -1,4 +1,5 @@
 "use client";
+
 import { useState, useEffect } from "react";
 import styles from "./style.module.scss";
 import { CldImage, CldUploadWidget } from 'next-cloudinary';
@@ -90,7 +91,6 @@ export default function Admin() {
         setUploadError(null);
     };
 
-    // Team member management functions
     const addTeamMember = () => {
         setFormData(prev => ({
             ...prev,
@@ -188,7 +188,6 @@ export default function Admin() {
         setFormData(prev => ({ ...prev, image: null }));
     };
 
-    // Safe Upload Button Component with error handling
     const SafeUploadButton = ({
                                   uploadPreset,
                                   options,
@@ -291,8 +290,7 @@ export default function Admin() {
                             <div className={styles.previewContent}>
                                 <p>{currentPageData.content || 'No content available'}</p>
                             </div>
-
-                            {/* Team Members Preview */}
+                            
                             {activeTab === 'teams' && currentPageData.members && currentPageData.members.length > 0 && (
                                 <div className={styles.teamPreview}>
                                     <h3>Team Members</h3>

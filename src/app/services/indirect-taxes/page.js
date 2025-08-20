@@ -7,7 +7,6 @@ export default function TaxPage() {
             <section className={styles.serviceSection}>
                 <div className={styles.body}>
                     <div className={styles.heading}>
-                        <h3>04</h3>
                         <Text>
                             <h1>Indirect Tax Services</h1>
                         </Text>

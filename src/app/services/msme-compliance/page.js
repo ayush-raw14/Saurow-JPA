@@ -7,7 +7,6 @@ export default function MSMEPage() {
             <section className={styles.serviceSection}>
                 <div className={styles.body}>
                     <div className={styles.heading}>
-                        <h3>06</h3>
                         <Text>
                             <h1>MSME Compliance Services</h1>
                         </Text>

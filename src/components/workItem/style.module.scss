@@ -10,6 +10,7 @@
   h1 {
     text-transform: uppercase;
     text-align: center;
+    margin-top: 20%;
     font-size: 5rem;
     font-weight: 550;
     line-height: 1;
@@ -40,12 +41,10 @@
       transform: translate(-50%, -50%);
       width: 100%;
       z-index: 1;
-      overflow: hidden; // Important for character animation
+      overflow: hidden;
 
       h1 {
         color: #f8f9fa;
-
-        // Global class for SplitText chars
         :global(.char) {
           display: inline-block;
           transform-origin: bottom;

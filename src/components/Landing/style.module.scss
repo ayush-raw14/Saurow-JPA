@@ -17,7 +17,7 @@ $large: 1200px;
     padding: 0 clamp(1rem, 5vw, 12.5rem);
     display: flex;
     flex-direction: row;
-    gap: clamp(2rem, 15vw, 12.5rem);
+    gap: 10rem;
     align-items: flex-start;
     min-width: 0;
 
@@ -35,6 +35,7 @@ $large: 1200px;
 
     .scrollText {
       margin-top: 500px;
+      margin-left: 150px;
       flex-shrink: 0;
 
       @media (max-width: $tablet) {
@@ -49,6 +50,11 @@ $large: 1200px;
         writing-mode: vertical-lr;
         text-orientation: mixed;
 
+        @media (max-width: $desktop) {
+          margin-top: 50px;
+          margin-left: -10px;
+
+        }
         @media (max-width: $tablet) {
           writing-mode: horizontal-tb;
           text-orientation: initial;
@@ -69,6 +75,10 @@ $large: 1200px;
       align-items: flex-start;
       flex: 1;
       margin-top: 100px;
+
+      @media (max-width: $desktop) {
+        margin-left: -100px;
+      }
 
       @media (max-width: $tablet) {
         flex-direction: column;

@@ -8,7 +8,6 @@ export default function FEMAPage() {
             <section className={styles.serviceSection}>
                 <div className={styles.body}>
                     <div className={styles.heading}>
-                        <h3>07</h3>
                         <Text>
                             <h1>FEMA Advisory & Compliance Services</h1>
                         </Text>

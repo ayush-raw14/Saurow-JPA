@@ -104,7 +104,6 @@ export default function ContactPage() {
             variants={containerVariants}
         >
             <motion.div className={styles.headerSection} variants={itemVariants}>
-                <motion.span className={styles.sectionNumber}>11</motion.span>
                 <motion.h1 className={styles.heading}>
                     Get in Touch with us
                 </motion.h1>

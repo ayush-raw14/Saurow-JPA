@@ -11,9 +11,6 @@ export default function Landing() {
                     <p>scroll</p>
                 </div>
                 <div className={styles.mainHeading}>
-                    <div className={styles.index}>
-                        <p>01</p>
-                    </div>
                     <Text>
                         <h1>
                             We help<br />

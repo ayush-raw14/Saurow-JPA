@@ -3,7 +3,6 @@ import styles from './style.module.scss';
 import { notFound } from 'next/navigation';
 import TeamImage from "./teamImage";
 
-// Force dynamic rendering
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 export const runtime = 'nodejs';
@@ -46,10 +45,9 @@ async function getContent() {
         debugInfo.urlStrategy = urlStrategy;
         debugInfo.step = 'url_constructed';
 
-        // Try internal API call first on server
         if (isServer) {
             try {
-                console.log('🔄 Attempting internal API call...');
+                console.log('Attempting internal API call...');
                 const { GET } = require('../../api/content/[section]/route');
                 const mockRequest = { nextUrl: { searchParams: new Map() } };
                 const mockParams = Promise.resolve({ section: 'teams' });
@@ -57,7 +55,7 @@ async function getContent() {
                 const response = await GET(mockRequest, { params: mockParams });
                 const data = await response.json();
 
-                console.log('✅ Internal API call successful:', data);
+                console.log('Internal API call successful:', data);
                 debugInfo.method = 'internal_api';
                 debugInfo.success = true;
 
@@ -76,7 +74,6 @@ async function getContent() {
             }
         }
 
-        // Fallback to HTTP fetch
         const apiUrl = `${baseUrl}/api/content/teams`;
         debugInfo.apiUrl = apiUrl;
         debugInfo.step = 'attempting_fetch';
@@ -110,8 +107,8 @@ async function getContent() {
             debugInfo.errorText = errorText;
             debugInfo.step = 'response_not_ok';
 
-            console.error('❌ API Error Response:', errorText);
-            console.error('❌ Full response:', {
+            console.error('API Error Response:', errorText);
+            console.error('Full response:', {
                 status: response.status,
                 statusText: response.statusText,
                 url: response.url
@@ -129,7 +126,7 @@ async function getContent() {
         debugInfo.method = 'http_fetch';
         debugInfo.success = true;
 
-        console.log('✅ Received data:', data);
+        console.log('Received data:', data);
 
         if (!data || typeof data !== 'object') {
             throw new Error('Invalid data structure received');
@@ -154,15 +151,15 @@ async function getContent() {
             toString: error?.toString() || 'No string representation'
         };
 
-        console.error('💥 Error fetching team content:', error);
-        console.error('💥 Full error object:', {
+        console.error('Error fetching team content:', error);
+        console.error('Full error object:', {
             error,
             type: typeof error,
             constructor: error?.constructor?.name,
             isNull: error === null,
             isUndefined: error === undefined
         });
-        console.error('💥 Debug Info:', JSON.stringify(debugInfo, null, 2));
+        console.error('Debug Info:', JSON.stringify(debugInfo, null, 2));
 
         return {
             title: 'Our Team (Error Mode)',
@@ -204,7 +201,6 @@ async function TeamContent() {
     return (
         <div className={styles.container}>
             <header className={styles.header}>
-                <h2>09</h2>
                 <h1 className={styles.title}>{content.title}</h1>
                 {content.subtitle && (
                     <p className={styles.subtitle}>{content.subtitle}</p>

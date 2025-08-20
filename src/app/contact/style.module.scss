@@ -1,4 +1,4 @@
-// Variables
+
 $primary-color: #ffffff;
 $accent-color: #455ce9;
 $bg-color: #151515;
@@ -17,21 +17,12 @@ $shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   width: 100vw;
   max-width: 100%;
   overflow-x: hidden;
-  padding: 6rem 5% 4rem;
+  padding: 10rem 5% 4rem;
 
   .headerSection {
     text-align: center;
     max-width: 800px;
     margin: 100px auto 5rem;
-
-    .sectionNumber {
-      display: inline-block;
-      font-size: 2.5rem;
-      font-style: italic;
-      color: $secondary-text;
-      margin-bottom: 1rem;
-      font-weight: 400;
-    }
 
     .heading {
       font-size: 3.5rem;
@@ -351,10 +342,9 @@ $shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   }
 }
 
-// Responsive Design
 @media screen and (max-width: 1200px) {
   .contactContainer {
-    padding: 5rem 4% 3rem;
+    padding: 8rem 4% 3rem;
 
     .contactContent {
       grid-template-columns: 1fr 350px;
@@ -373,7 +363,7 @@ $shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 
 @media screen and (max-width: 992px) {
   .contactContainer {
-    padding: 4rem 4% 3rem;
+    padding: 8rem 4% 3rem;
 
     .headerSection {
       margin-bottom: 3rem;
@@ -411,7 +401,7 @@ $shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 
 @media screen and (max-width: 768px) {
   .contactContainer {
-    padding: 3rem 5% 2rem;
+    padding: 8rem 5% 2rem;
 
     .headerSection {
       margin-bottom: 2.5rem;
@@ -496,7 +486,7 @@ $shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 
 @media screen and (max-width: 480px) {
   .contactContainer {
-    padding: 2.5rem 4% 2rem;
+    padding: 6rem 4% 2rem;
 
     .headerSection {
       margin-bottom: 2rem;
@@ -581,7 +571,7 @@ $shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 
 @media screen and (max-width: 360px) {
   .contactContainer {
-    padding: 2rem 3% 1.5rem;
+    padding: 5rem 3% 1.5rem;
 
     .headerSection {
       .heading {

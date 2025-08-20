@@ -90,7 +90,6 @@ export default function ServicesSection() {
     return (
         <section className={styles.aboutSection} ref={sectionRef}>
             <div className={styles.body}>
-                <span className={styles.index}>02</span>
                 <h2 ref={headingRef}>We can help you with...</h2>
                 <div className={styles.grid}>
                     {services.map((service) => (

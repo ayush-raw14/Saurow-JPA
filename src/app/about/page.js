@@ -27,7 +27,6 @@ export default function AboutPage() {
             <div className={styles.body}>
                 <div className={styles.heading}>
                     <Text>
-                        <h3 className={styles.index}>10</h3>
                         <h1>
                             Trusted Advisors. Tailored Solutions. Real Results.
                         </h1>

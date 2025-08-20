@@ -7,7 +7,6 @@ export default function InternalAuditPage() {
             <section className={styles.serviceSection}>
                 <div className={styles.body}>
                     <div className={styles.heading}>
-                        <h3>03</h3>
                         <Text>
                             <h1>Internal Audit Services</h1>
                         </Text>

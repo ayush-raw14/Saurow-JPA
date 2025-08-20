@@ -7,9 +7,8 @@ export default function CompanyLawPage() {
             <section className={styles.serviceSection}>
                 <div className={styles.body}>
                     <div className={styles.heading}>
-                        <h3>05</h3>
                         <Text>
-                            <h1>Company Law and Compliances</h1>
+                            <h1>Company Law and Compliance&#39;s</h1>
                         </Text>
                     </div>
 

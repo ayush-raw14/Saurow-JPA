@@ -84,10 +84,10 @@ export default function WorkItem() {
             <section className={styles.workItemMain} ref={workItemMainRef}>
                 <section className={styles.workItem}>
                     <div className={styles.workItemImg}>
-                        <Image src="/images/trees.jpg" alt="journey" fill priority />
+                        <Image src="/images/city.jpg" alt="journey" fill priority />
                     </div>
                     <div className={styles.workItemName}>
-                        <h1>Trusted Partnership</h1>
+                        <h1>Building Trust</h1>
                     </div>
                 </section>
 
@@ -105,34 +105,25 @@ export default function WorkItem() {
                         <Image src="/images/us.jpg" alt="carbon edge us" fill priority />
                     </div>
                     <div className={styles.workItemName}>
-                        <h1>Carbon Edge</h1>
+                        <h1>Driving growth</h1>
                     </div>
                 </section>
 
                 <section className={styles.workItem}>
                     <div className={styles.workItemImg}>
-                        <Image src="/images/cloud.jpg" alt="journey project" fill priority />
+                        <Image src="/images/bridge.jpg" alt="journey project" fill priority />
                     </div>
                     <div className={styles.workItemName}>
-                        <h1>Carbon Edge</h1>
+                        <h1>Guiding Success</h1>
                     </div>
                 </section>
 
                 <section className={styles.workItem}>
                     <div className={styles.workItemImg}>
-                        <Image src="/images/side.jpg" alt="journey final" fill priority />
+                        <Image src="/images/canvas.jpg" alt="journey final" fill priority />
                     </div>
                     <div className={styles.workItemName}>
-                        <h1>Carbon Edge</h1>
-                    </div>
-                </section>
-
-                <section className={styles.workItem}>
-                    <div className={styles.workItemImg}>
-                        <Image src="/images/fern.jpg" alt="journey final" fill priority />
-                    </div>
-                    <div className={styles.workItemName}>
-                        <h1>Carbon Edge</h1>
+                        <h1>Fortifying Compliance</h1>
                     </div>
                 </section>
             </section>

@@ -7,7 +7,6 @@ export default function CertificationPage() {
             <section className={styles.serviceSection}>
                 <div className={styles.body}>
                     <div className={styles.heading}>
-                        <h3>08</h3>
                         <Text>
                             <h1>Certifications and Attestations</h1>
                         </Text>

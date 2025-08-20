@@ -69,12 +69,6 @@
     margin-bottom: 2rem;
   }
 
-  h3 {
-    font-size: 3rem;
-    font-style: italic;
-    color: #ffffff;
-    font-weight: 500;
-  }
   h1 {
     font-size: clamp(2.5rem, 5vw, 4rem);
     color: #ffffff;
@@ -281,7 +275,7 @@
   }
 }
 
-// Improved spacing for mobile
+
 @media (max-width: 480px) {
   .body {
     padding: 0 10px;
