@@ -3,51 +3,14 @@
 import styles from './style.module.scss';
 import Text from '@/common/Text';
 import Image from 'next/image';
-import { useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useGSAP } from "@gsap/react";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
-
-    const heroRef = useRef(null);
-    const textRef = useRef(null);
-    const imageRef = useRef(null);
-
-    useGSAP(() => {
-        gsap.from(textRef.current, {
-            x: -300,
-            duration: 0.6,
-            opacity: 0.8,
-            scrollTrigger: {
-                trigger: heroRef.current,
-                start: "top bottom",
-                end: "top top",
-                scrub: 2,
-            }
-        });
-
-        gsap.from(imageRef.current, {
-           x: 300,
-           duration: 0.6,
-           opacity: 0.8,
-           scrollTrigger: {
-               trigger: heroRef.current,
-               start: "top bottom",
-               end: "top top",
-               scrub: 2,
-           }
-        });
-    }, { scope: heroRef });
     return (
-        <section className={styles.hero} ref={heroRef}>
+        <section className={styles.hero}>
             <div className={styles.body}>
                 <div className={styles.content}>
                     <div
                         className={styles.text}
-                        ref={textRef}
                     >
                         <Text>
                             <p className={styles.para1}>
@@ -64,7 +27,6 @@ export default function Hero() {
 
                     <div
                         className={styles.imageWrapper}
-                        ref={imageRef}
                     >
                         <Image
                             src="/images/graph.jpg"
