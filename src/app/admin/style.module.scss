@@ -6,6 +6,12 @@
   max-width: 100%;
   overflow: hidden;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  // Mobile viewport height adjustment
+  @media (max-width: 768px) {
+    height: 100dvh; // Use dynamic viewport height on mobile
+    padding-top: 120px;
+  }
 }
 
 .container {
@@ -83,11 +89,14 @@
   padding: 32px 24px;
 
   @media (max-width: 768px) {
-    padding: 24px 16px;
+    padding: 24px 16px 120px; // Add extra bottom padding for mobile
+    // Ensure content can scroll properly with keyboard
+    scroll-padding-bottom: 120px;
   }
 
   @media (max-width: 480px) {
-    padding: 20px 12px;
+    padding: 20px 12px 140px; // Even more bottom padding for small screens
+    scroll-padding-bottom: 140px;
   }
 }
 
@@ -249,6 +258,11 @@
 
 .editor {
   max-width: 100%;
+  margin-bottom: 20px; // Extra space at bottom
+
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+  }
 }
 
 .editorHeader {
@@ -300,6 +314,16 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  // Handle keyboard appearing on mobile
+  @media (max-width: 768px) {
+    // Add more spacing between form elements when keyboard might appear
+    padding-bottom: env(keyboard-inset-height, 0px);
+
+    .formGroup:last-of-type {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .formRow {
@@ -346,6 +370,11 @@
     resize: vertical;
     min-height: 120px;
     line-height: 1.5;
+
+    // Prevent zoom on iOS
+    @media (max-width: 480px) {
+      font-size: 16px;
+    }
   }
 }
 
@@ -564,14 +593,28 @@
   }
 }
 
+// FIXED: Make the form actions sticky on mobile for better UX
 .formActions {
   padding-top: 24px;
   border-top: 1px solid #e5e5e5;
   display: flex;
   justify-content: flex-end;
+  margin-top: 32px;
+
+  @media (max-width: 768px) {
+    position: sticky;
+    bottom: 0;
+    background: white;
+    padding: 16px 0;
+    margin-top: 24px;
+    border-top: 2px solid #e5e5e5;
+    box-shadow: 0 -4px 6px -1px rgb(0 0 0 / 0.1);
+    z-index: 10;
+  }
 
   @media (max-width: 480px) {
     justify-content: stretch;
+    padding: 12px 0;
   }
 }
 
@@ -584,6 +627,7 @@
   font-weight: 500;
   cursor: pointer;
   transition: all 0.15s ease;
+  border-radius: 4px; // Add some border radius for better mobile UX
 
   &:hover {
     background: #404040;
@@ -600,7 +644,8 @@
 
   @media (max-width: 480px) {
     width: 100%;
-    padding: 14px 24px;
+    padding: 16px 24px; // Larger touch target on mobile
+    font-size: 16px; // Prevent zoom on iOS
   }
 }
 
@@ -623,7 +668,6 @@
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
 }
-
 
 // Reduced motion support
 @media (prefers-reduced-motion: reduce) {
