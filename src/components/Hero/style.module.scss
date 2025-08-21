@@ -1,5 +1,5 @@
 .hero {
-  height: 60vh;
+  height: 80vh;
   width: 100vw;
   max-width: 100%;
   overflow: hidden;
@@ -7,6 +7,7 @@
 
   .body {
     margin-top: 50px;
+    margin-left: 40px;
     width: 100%;
     padding: 0 5%;
     display: flex;
@@ -15,7 +16,7 @@
     .content {
       display: flex;
       flex-direction: row;
-      gap: 10vw;
+      gap: 6vw;
       align-items: center;
       justify-content: space-between;
       margin-top: 1.5rem;
@@ -44,6 +45,7 @@
         flex: 1;
         display: flex;
         justify-content: center;
+        margin-top: 100px;
 
         .image {
           width: 100%;
