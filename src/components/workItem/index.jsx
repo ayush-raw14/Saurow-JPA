@@ -111,7 +111,7 @@ export default function WorkItem() {
 
                 <section className={styles.workItem}>
                     <div className={styles.workItemImg}>
-                        <Image src="/images/bridge.jpg" alt="journey project" fill priority />
+                        <Image src="/images/bridge.jpg" alt="Bridge" fill priority />
                     </div>
                     <div className={styles.workItemName}>
                         <h1>Guiding Success</h1>
@@ -120,7 +120,7 @@ export default function WorkItem() {
 
                 <section className={styles.workItem}>
                     <div className={styles.workItemImg}>
-                        <Image src="/images/canvas.jpg" alt="journey final" fill priority />
+                        <Image src="/images/canvas.jpg" alt="Fort" fill priority />
                     </div>
                     <div className={styles.workItemName}>
                         <h1>Fortifying Compliance</h1>

@@ -34,7 +34,6 @@ $font-weight-medium: 500;
 
 $breakpoint-tablet: 768px;
 
-// Mixins
 @mixin smooth-text {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -68,13 +67,12 @@ $breakpoint-tablet: 768px;
   height: auto;
 
   img {
-    width: 100%;
+    width: 80%;
     height: auto;
     object-fit: cover;
     display: block;
   }
 
-  // Loading state
   &[style] {
     background-color: $color-skeleton;
     height: 300px;
@@ -103,7 +101,6 @@ $breakpoint-tablet: 768px;
   line-height: $line-height-normal;
 }
 
-// Main content
 .content {
   max-width: 1200px;
   margin: 0 auto;
@@ -119,13 +116,11 @@ $breakpoint-tablet: 768px;
     @include smooth-text;
   }
 
-  // Handle nested paragraph elements
   > div > p {
     margin-bottom: $spacing-md;
   }
 }
 
-// Meta section
 .meta {
   margin-top: $spacing-xl;
   padding-top: $spacing-md;
@@ -134,12 +129,10 @@ $breakpoint-tablet: 768px;
   color: $color-text-muted;
 }
 
-// Loading skeleton styles
 .loading {
   text-align: left;
 }
 
-// Responsive design
 @media (max-width: $breakpoint-tablet) {
   .container {
     padding: 200px $spacing-sm;

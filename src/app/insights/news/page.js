@@ -1,8 +1,7 @@
-import { Suspense } from 'react';
+import {Suspense} from 'react';
 import styles from './style.module.scss';
-import { notFound } from 'next/navigation';
+import {notFound} from 'next/navigation';
 import NewsImage from "./newsImage";
-import Text from '@/common/Text/index';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -49,11 +48,11 @@ async function getContent() {
         if (isServer) {
             try {
                 console.log('🔄 Attempting internal API call...');
-                const { GET } = require('../../api/content/[section]/route');
-                const mockRequest = { nextUrl: { searchParams: new Map() } };
-                const mockParams = Promise.resolve({ section: 'newsletter' });
+                const {GET} = require('../../api/content/[section]/route');
+                const mockRequest = {nextUrl: {searchParams: new Map()}};
+                const mockParams = Promise.resolve({section: 'newsletter'});
 
-                const response = await GET(mockRequest, { params: mockParams });
+                const response = await GET(mockRequest, {params: mockParams});
                 const data = await response.json();
 
                 console.log('✅ Internal API call successful:', data);
@@ -86,7 +85,7 @@ async function getContent() {
         const response = await fetch(apiUrl, {
             signal: controller.signal,
             cache: 'no-store',
-            next: { revalidate: 0 },
+            next: {revalidate: 0},
             headers: {
                 'Content-Type': 'application/json',
                 'Cache-Control': 'no-cache, no-store, must-revalidate',
@@ -176,7 +175,7 @@ function ContentSkeleton() {
     return (
         <div className={styles.container}>
             <div className={styles.hero}>
-                <div className={styles.heroImage} style={{ backgroundColor: '#f0f0f0', height: '400px' }}>
+                <div className={styles.heroImage} style={{backgroundColor: '#f0f0f0', height: '400px'}}>
                     <div style={{
                         display: 'flex',
                         alignItems: 'center',
@@ -218,9 +217,7 @@ async function NewsContent() {
                     title={content.title}
                 />
                 <div className={styles.heroContent}>
-                    <Text>
-                        <h1>{content.title}</h1>
-                    </Text>
+                    <h1>{content.title}</h1>
                     {content.subtitle && (
                         <p className={styles.subtitle}>{content.subtitle}</p>
                     )}
@@ -244,8 +241,8 @@ async function NewsContent() {
 
 export default function NewsPage() {
     return (
-        <Suspense fallback={<ContentSkeleton />}>
-            <NewsContent />
+        <Suspense fallback={<ContentSkeleton/>}>
+            <NewsContent/>
         </Suspense>
     );
 }
@@ -259,7 +256,7 @@ export async function generateMetadata() {
             openGraph: {
                 title: content.title,
                 description: content.subtitle || content.content?.substring(0, 160),
-                images: content.image ? [{ url: content.image }] : [],
+                images: content.image ? [{url: content.image}] : [],
             },
         };
     } catch (error) {
